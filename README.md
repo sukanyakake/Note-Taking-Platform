@@ -23,22 +23,6 @@
 | **Auth**      | 🔑 JWT, 🔒 bcrypt                       |
 | **Dev Tools** | ⚙️ dotenv, 🚀 Nodemon, 🧪 ThunderClient |
 
-## 🗂️📁 **FOLDER STRUCTURE**
-note-taking/
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── controllers/
-│   ├── .env
-│   └── index.js
-├── frontend/
-│   ├── components/
-│   ├── pages/
-│   ├── utils/
-│   └── App.js
-└── README.md
-
 ## 📡📬 **API ENDPOINTS**
 
 | 📍 Method | 🛣️ Route   | 📝 Description         |
