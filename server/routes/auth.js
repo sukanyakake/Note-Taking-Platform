@@ -3,7 +3,10 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import middleware from "../middleware/middleware.js";
+import dotenv from "dotenv";
+
 const router=express.Router();
+
 router.post('/register',async(req,res)=>{
     try{
         const {name,email,password}=req.body;
@@ -36,7 +39,7 @@ router.post('/login',async(req,res)=>{
         if(!checkpass){
             return res.status(401).json({success:false,message:"wrong credentials"});
         }
-        const token=jwt.sign({id:user._id},"secretkey123@",{expiresIn:"5h"});
+        const token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"5h"});
         res.status(200).json({ success: true,token,user:{name:user.name} ,message: "Login successfull" });
 }
         catch (error) {
